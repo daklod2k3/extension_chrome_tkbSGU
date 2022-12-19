@@ -7,7 +7,7 @@
       {
        "matches":["*://*/*page=thoikhoabieu*"],
        "js" : [ "ui/timetable.js", "ui/dsgv.js", "UI/modules/jquery.js","jquery.scoped.js", "main.js"],
-       "css" : ["ui/style.css"]
+       "css" : ["ui/style_tkb.css"]
       }
     ],
     "icons" :{
