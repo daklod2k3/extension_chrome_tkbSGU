@@ -116,10 +116,10 @@ function ren(tkb, div){
                 if (classList == "col_basic") {
                     cell.attr("rowspan", total);
                     let th
-                    if (item["th"] != 0) th = 
+                    if (item["th"] === "01") th = 
                     "<i class='text-mutted'> (Thực hành) </i>"
                     else th ="";
-                    // console.log(item['th']);
+                    console.log(item['th']);
                     cell.html(
                             "<span class='text-color'>" +
                                 item["TenMH"] +

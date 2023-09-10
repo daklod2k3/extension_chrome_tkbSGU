@@ -91,8 +91,9 @@ async function crawl_tkb() {
         const phong = data[12].childNodes[index].textContent
         const cbgd = data[13].childNodes[index].textContent
         const tuan = data[14].childNodes[index].textContent
-        const th = data[8].childNodes[index].textContent
-        tkb.push(new MonHoc(mmh, tmh, nmh, thu, tiet, st, phong, cbgd, tuan, th))
+        const th = data[8].childNodes[index + 1].textContent
+        if (tuan[0] === "1")
+          tkb.push(new MonHoc(mmh, tmh, nmh, thu, tiet, st, phong, cbgd, tuan, th))
       });  
     } else {
       const data = ele.childNodes
