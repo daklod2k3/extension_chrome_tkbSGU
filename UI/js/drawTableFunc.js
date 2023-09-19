@@ -95,7 +95,7 @@ const drawSchedule = (data) => {
                         "</span>"
                 );
 
-                const courseType = item["Thu"] - 2; //
+                const courseType = item["Thu"]; //
                 cell.addClass("course");
                 cell.addClass(`course-${courseType}`);
 

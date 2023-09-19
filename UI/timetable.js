@@ -107,20 +107,24 @@ function ren(tkb, div){
             const start = item["TietBD"];
             const day = item["Thu"];
             const total = item["ST"];
-            const cell = $(`#d${day}_s${start}`);
+            $(`#d${day}_s${start}`).append("<div class='card'></div>");
+            // $(`#d${day}_s${start} > `).append("<div class='card'></div>")
+            const cell =  $(`#d${day}_s${start} >`)
+            console.log(cell);
             if (cell) {
                 // cell.classList == 'course' : bị bỏ qua vì className không chỉ có mỗi course
                 // API v2 đã fix lỗi này
-                const classList = cell.attr("class") + "";
+                const classList = $(`#d${day}_s${start}`).attr("class") + "";
                 // console.log(classList);
                 if (classList == "col_basic") {
-                    cell.attr("rowspan", total);
+                    $(`#d${day}_s${start}`).attr("rowspan", total);
                     let th
                     if (item["th"] === "01") th = 
                     "<i class='text-mutted'> (Thực hành) </i>"
                     else th ="";
                     console.log(item['th']);
-                    cell.html(
+                    $(`#d${day}_s${start} > `).html(
+                        // "<div class = \"card\">" +
                             "<span class='text-color'>" +
                                 item["TenMH"] +
                                 "</span>" +
@@ -135,10 +139,10 @@ function ren(tkb, div){
                             "<span class='text-color'>" +
                                 item["CBGD"] +
                             "</span>" 
-                            
+                        // "</div>"    
                             );
     
-                    const courseType = item["Thu"] - 2 ; // Chỉnh màu
+                    const courseType = item["Thu"] - 1 ; // Chỉnh màu
                     cell.addClass("course");
                     cell.addClass(`course-${courseType}`);
                     // console.log(cell);
@@ -165,7 +169,7 @@ function ren(tkb, div){
             '<td class="thead_td">Thứ Sáu</td>' +
             '<td class="thead_td">Thứ Bảy</td>' +
             '<td class="stt bg-white"></td>';
-        table_body.append(lastRow);
+        // table_body.append(lastRow);
     };
     
     drawSchedule(tkb)
