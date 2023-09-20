@@ -3,26 +3,27 @@
   --empty-color: #F2F2F2;
   --basic-col-color: #fff;
 
-  --primary-color: #F75C1E;
-  --course-color: #f75b1e2f;
+  --primary-7-color: #fd4d40;
+  --course-7-color: #f75b1e2f;
 
   --primary-2-color: #369925;
   --course-2-color: #3894281a;
 
-  --primary-3-color: #0665e0;
-  --course-3-color: #639eeb2c;
+  --primary-5-color: #0665e0;
+  --course-5-color: #639eeb2c;
 
-  --primary-4-color: #32ABC6;
-  --course-4-color: #c8ece870;
+  --primary-4-color: #EA1E63;
+  --course-4-color: #EA1E632A;
 
-  --primary-5-color: #ec9f3f;
-  --course-5-color: #f7b76842;
+  --primary-3-color: #1fc2d9;
+  --course-3-color: #c8ece870;
+
+  --primary-color: #ebb830;
+  --course-color: #f7b76842;
 
   --primary-6-color: #985bc7;
   --course-6-color: #e1c2fb73;
 
-  --primary-7-color: #EA1E63;
-  --course-7-color: #EA1E632A;
 
   --primary-8-color: #009788;
   --course-8-color: #0097882A;
@@ -48,7 +49,8 @@
 .custom_table table,
 .custom_table tr,
 .custom_table td {
-  /* border: 1px solid #cfcfcf;  */
+  /* border: ;  */
+  border-block: 1px solid #cfcfcf;
   /* display: flex; */
   /* width: max-content; */
   height: max-content !important;
@@ -100,7 +102,7 @@
 
 .col_basic {
   background-color: var(--basic-col-color);
-  opacity: .6;
+  opacity: .8;
   width: 150px !important;
   height: 38px !important;
 }
@@ -122,10 +124,13 @@
   position: relative;
   font-size: .8rem;
   color: white !important;
+  text-transform: uppercase;
+  /* font-weight: bold; */
 }
 
 .course-0 {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
+  /* background: linear-gradient(90deg, #e94086 0%, #e5925a 100%); */
   /* color: var(--primary-color) !important; */
 }
 
@@ -284,9 +289,11 @@
   border-radius: 10px;
   display: block !important;
   /* height: 80%; */
-  /* height: calc(100% - 10px); */
+  height: calc(100% - 40px);
+  /* height: 100%; */
+  padding: 10px;
   margin: 5px;
-  padding: 7px;
+  /* margin-block: auto; */
 }
 
 /* .card > *{

@@ -125,7 +125,7 @@ function ren(tkb, div){
                     console.log(item['th']);
                     $(`#d${day}_s${start} > `).html(
                         // "<div class = \"card\">" +
-                            "<span class='text-color'>" +
+                            "<span class='text-color' style=\"{font-weight:bold !important}\">" +
                                 item["TenMH"] +
                                 "</span>" +
                                 th +
@@ -142,7 +142,7 @@ function ren(tkb, div){
                         // "</div>"    
                             );
     
-                    const courseType = item["Thu"] - 1 ; // Chỉnh màu
+                    const courseType = item["Thu"] - 1; // Chỉnh màu
                     cell.addClass("course");
                     cell.addClass(`course-${courseType}`);
                     // console.log(cell);
@@ -161,14 +161,14 @@ function ren(tkb, div){
         // thêm hàng thứ vào cuối
         const lastRow = document.createElement("tr");
         lastRow.innerHTML =
-            '<td class="stt bg-white"></td>' +
+            '<td ></td>' +
             '<td class="thead_td">Thứ Hai</td>' +
             '<td class="thead_td">Thứ Ba</td>' +
             '<td class="thead_td">Thứ Tư</td>' +
             '<td class="thead_td">Thứ Năm</td>' +
             '<td class="thead_td">Thứ Sáu</td>' +
             '<td class="thead_td">Thứ Bảy</td>' +
-            '<td class="stt bg-white"></td>';
+            '<td ></td>';
         // table_body.append(lastRow);
     };
     
