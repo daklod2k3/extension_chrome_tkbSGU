@@ -15,7 +15,7 @@
                 "modules/dsgv.js",
                 "main.js"
             ],
-       "css" : ["ui/style_tkb.css"]
+       "css" : ["content-page/style_tkb.css"]
       }
     ],
     "icons" :{

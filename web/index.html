@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../content-page/style_tkb.css">
     <title>Document</title>
 </head>
 <body>
     <div class="center-content">
-        <form action="import_tkb()" class="form-input">
-            <textarea name="" id="" cols="30" rows="10" id="source"></textarea>
-            <p class="describe"> *Vào trang thời khoá biểu của trường và chuột phải chọn View Source Page (Xem nguồn trang), sau đó ctrl A chọn tất cả và Copy, sau đó Paste vào ô phía trên rồi ấn Nhập</p>
-            <button>Nhập</button>
+        <form onsubmit="return false" class="form-input">
+            <textarea name="" cols="30" rows="10" id="source" placeholder="Nhập source code ở đây"></textarea>
+            <p class="describe"> B1: Vào trang thời khoá biểu của trường và chuột phải chọn View Source Page (Xem nguồn trang)
+                <br/> B2: Ctrl A chọn tất cả và Copy
+                <br/> B3: Paste vào ô phía trên rồi ấn Nhập (quá trình paste có thể lâu hơn bình thường vì dữ liệu lớn vui lòng đợi cho đến khi source code hiện lên)</p>
+            <button onclick="import_tkb()">Nhập</button>
+            <p class="error">
+                lõioooooooooooooooooooo
+            </p>
         </form>
-        <div class="tkb"></div>
     </div>
-    <script src="./module/main.js" type="module"></script>
+    <div class="custom_table" id="table_schedule" style="margin-top: 50px;"></div>
+    
+    <script src="../modules/jquery.js"></script>
+    <script src="../modules/subject.js"></script>
+    <script src="../modules/crawl_data.js" ></script>
+    <script src="../modules/render_schedule.js" ></script>
+    <script src="../modules/dsgv.js" ></script>
+    <script src="./modules/main.js" ></script>
 </body>
 </html>

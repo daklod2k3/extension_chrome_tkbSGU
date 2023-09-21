@@ -28,6 +28,16 @@
     width: 600px;
 }
 
+.form-input .error {
+    background-color: rgb(54, 153, 37, 0.6);
+    /* border: ; */
+    /* opacity: 0.8; */
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+}
+
 .form-input button {
     margin-top: 20px;
     width: 150px;

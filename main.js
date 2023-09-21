@@ -8,6 +8,8 @@ let default_data = ''
 
 
 crawl_tkb($('div.grid-roll2 > table'))
+chrome.runtime.sendMessage(tkb)
+
 
 function render_new_table(){
   let div_cusom = document.createElement('div')
@@ -41,7 +43,7 @@ let bt_change = document.createElement('input');
 console.log(bt_change);
 bt_change.setAttribute('type', 'button');
 bt_change.setAttribute('value', 'Xem tkb theo tuần')
-bt_change.setAttribute('style', 'font-size: 11px; height: 20px')
+bt_change.setAttribute('style', 'font-size: 11px; height: 30px; margin-left: 10px; background-color: #369925; color: white; border-color: transparent; border-radius: 3px')
 document.querySelector('#InTKB').after(bt_change)
 // bt_change.setAttribute('onClick', 'bt_change_onClick()')
 bt_change.addEventListener('click', bt_change_onClick)

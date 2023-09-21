@@ -25,7 +25,7 @@
       //   })
       // }else 
       chrome.tabs.create({
-        url: chrome.extension.getURL("/ui/index.html"),
+        url: chrome.extension.getURL("/content-page/index.html"),
         active : true
       })
     })

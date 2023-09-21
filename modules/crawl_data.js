@@ -97,6 +97,5 @@ async function crawl_tkb(table) {
     // fs.writeFileSync('data.txt', table)
     // const csv = new ObjectsToCsv(tkb)
     // await csv.toDisk('./data.csv')
-    chrome.runtime.sendMessage(tkb)
         
   }
