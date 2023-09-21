@@ -1,0 +1,42 @@
+:root {
+    --green-color: #369925;
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.form-input > * {
+    margin-inline: auto;
+
+}
+
+.form-input textarea {
+    width: 500px;
+}
+
+.form-input .describe {
+    background-color: rgb(54, 153, 37, 0.6);
+    /* border: ; */
+    /* opacity: 0.8; */
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    width: 600px;
+}
+
+.form-input button {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    margin-inline: auto;
+    border-color: transparent;
+    color: white;
+    border-radius: 5px;
+    background-color: var(--green-color);
+    font-size: 15px;
+    text-transform: uppercase;
+}

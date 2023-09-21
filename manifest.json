@@ -6,7 +6,15 @@
     "content_scripts":[
       {
        "matches":["*://*/*page=thoikhoabieu*"],
-       "js" : [ "ui/timetable.js", "ui/dsgv.js", "UI/modules/jquery.js","jquery.scoped.js", "main.js"],
+       "js" : [ 
+                "modules/jquery.js", 
+                "modules/subject.js", 
+                "modules/dsgv.js",
+                "modules/render_schedule.js",
+                "modules/crawl_data.js",
+                "modules/dsgv.js",
+                "main.js"
+            ],
        "css" : ["ui/style_tkb.css"]
       }
     ],
