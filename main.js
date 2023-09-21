@@ -18,7 +18,7 @@ function render_new_table(){
 
   
 
-  console.log(document.querySelector('#InTKB'));
+  console.log(document.querySelector('#InTKB'));    
 
   default_data = document.querySelector('#ctl00_ContentPlaceHolder1_ctl00_pnlHeader').innerHTML;
   document.querySelector('#ctl00_ContentPlaceHolder1_ctl00_pnlHeader > table').replaceWith(div_cusom)
@@ -45,5 +45,3 @@ bt_change.setAttribute('style', 'font-size: 11px; height: 20px')
 document.querySelector('#InTKB').after(bt_change)
 // bt_change.setAttribute('onClick', 'bt_change_onClick()')
 bt_change.addEventListener('click', bt_change_onClick)
-
-

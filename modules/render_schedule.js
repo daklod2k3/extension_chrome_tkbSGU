@@ -162,14 +162,14 @@ function render_schedule(tkb, div){
         const lastRow = document.createElement("tr");
         lastRow.innerHTML =
             '<td ></td>' +
-            '<td class="thead_td">Thứ Hai</td>' +
-            '<td class="thead_td">Thứ Ba</td>' +
-            '<td class="thead_td">Thứ Tư</td>' +
-            '<td class="thead_td">Thứ Năm</td>' +
-            '<td class="thead_td">Thứ Sáu</td>' +
-            '<td class="thead_td">Thứ Bảy</td>' +
+            '<td class="header-fill"></td>' +
+            '<td class="header-fill"></td>' +
+            '<td class="header-fill"></td>' +
+            '<td class="header-fill"></td>' +
+            '<td class="header-fill"></td>' +
+            '<td class="header-fill"></td>' +
             '<td ></td>';
-        // table_body.append(lastRow);
+        table_body.append(lastRow);
     };
     
     drawSchedule(tkb)

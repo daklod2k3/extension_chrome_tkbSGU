@@ -1,6 +1,6 @@
 :root {
-  --title-color: #333;
-  --empty-color: #F2F2F2;
+  --title-color: white;
+  --empty-color: #2D8ECE;
   --basic-col-color: #fff;
 
   --primary-7-color: #fd4d40;
@@ -50,10 +50,12 @@
 .custom_table tr,
 .custom_table td {
   /* border: ;  */
-  border-block: 1px solid #cfcfcf;
+  /* border: 3px solid white; */
+  /* border-block: 1px solid #cfcfcf; */
   /* display: flex; */
   /* width: max-content; */
-  height: max-content !important;
+  /* height: max-content !important; */
+
 }
 
 .custom_table table {
@@ -61,6 +63,9 @@
   padding-bottom: 16px;
   margin: auto;
   border-spacing: 5px;
+  /* border-radius: 5px; */
+  border: 1px solid transparent;
+  overflow: hidden;
 }
 
 .custom_table td {
@@ -101,10 +106,11 @@
 }
 
 .col_basic {
+  border: 1px solid #cfcfcf !important;
   background-color: var(--basic-col-color);
   opacity: .8;
   width: 150px !important;
-  height: 38px !important;
+  /* height: 38px !important; */
 }
 
 .stt {
@@ -115,6 +121,11 @@
   background-color: var(--empty-color);
   color: var(--title-color);
   font-weight: bold;
+}
+
+.header-fill td {
+  border: 3px solid white;
+  background-color: var(--empty-color);
 }
 
 .course {
@@ -287,10 +298,10 @@
 .card {
   border: 1px solid transparent;
   border-radius: 10px;
-  display: block !important;
+  display: inline-block !important;
   /* height: 80%; */
-  height: calc(100% - 40px);
-  /* height: 100%; */
+  height: calc(100% );
+  /* height: max-content; */
   padding: 10px;
   margin: 5px;
   /* margin-block: auto; */
