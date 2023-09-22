@@ -66,12 +66,13 @@
   /* border-radius: 5px; */
   border: 1px solid transparent;
   overflow: hidden;
+  height: 1px;
 }
 
 .custom_table td {
   /* width: 140px !important; */
   /* display: flex; */
-  padding: auto;
+  /* padding: auto; */
 }
 
 .custom_table a {
@@ -110,7 +111,7 @@
   background-color: var(--basic-col-color);
   opacity: .8;
   width: 150px !important;
-  /* height: 38px !important; */
+  /* height: 100%; */
 }
 
 .stt {
@@ -298,9 +299,9 @@
 .card {
   border: 1px solid transparent;
   border-radius: 10px;
-  display: inline-block !important;
+  display: block !important;
   /* height: 80%; */
-  height: calc(100% );
+  height: calc(100% - 30px);
   /* height: max-content; */
   padding: 10px;
   margin: 5px;

@@ -1,6 +1,6 @@
-async function crawl_tkb(table) {
+function crawl_tkb(table) {
     
-    // var tkb = []
+    let tkb = []
     // const $ = document;
     // console.log(table);
     // const response = await axios('http://api.scraperapi.com?api_key=9fba3b67a75075f1ef3052e7da167ca2&url=' + url)
@@ -94,6 +94,7 @@ async function crawl_tkb(table) {
   
     })
     console.log(tkb)
+    return tkb
     // fs.writeFileSync('data.txt', table)
     // const csv = new ObjectsToCsv(tkb)
     // await csv.toDisk('./data.csv')

@@ -2,6 +2,7 @@
 
 // ren(tkb)
 function render_schedule(tkb, div){
+    div.innerHTML = ""
     const table = document.createElement('table')
     table.setAttribute('class', 'custom_table')
     div.appendChild(table)

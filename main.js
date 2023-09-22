@@ -2,12 +2,11 @@
 
 let listTask = []
 
-let tkb =[]
+let tkb = crawl_tkb($('div.grid-roll2 > table'))
 let default_data = ''
 
 
 
-crawl_tkb($('div.grid-roll2 > table'))
 chrome.runtime.sendMessage(tkb)
 
 
@@ -33,7 +32,7 @@ function bt_change_onClick(){
     bt_change.setAttribute('value', 'Xem tkb theo tuần')
     document.getElementById('ctl00_ContentPlaceHolder1_ctl00_pnlHeader').innerHTML = default_data;
   }else{
-    bt_change.setAttribute('value', 'Xem tkb của trường')
+    bt_change.setAttribute('value', 'Xem tkb gốc')
     render_new_table()
   }
   isChange = !isChange
