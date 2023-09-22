@@ -73,7 +73,7 @@ function crawl_tkb(table) {
           const cbgd = data[13].childNodes[index].textContent
           const tuan = data[14].childNodes[index].textContent
           const th = data[8].childNodes[index + 1].textContent
-          if (tuan[0] === "1")
+          // if (tuan[0] === "1")
             tkb.push(new MonHoc(mmh, tmh, nmh, thu, tiet, st, phong, cbgd, tuan, th))
         });  
       } else {

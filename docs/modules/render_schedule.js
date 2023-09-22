@@ -1,7 +1,7 @@
 // tkb = [ { "MaMH": "841022", "TenMH": " Hệ điều hành", "NMH": "01", "Thu": "Ba", "TietBD": "6", "ST": "2", "Phong": "C.A111", "CBGD": "11364", "Tuan": "123456789012345", "th": 0 }, { "MaMH": "841022", "TenMH": " Hệ điều hành", "NMH": "01", "Thu": "Hai", "TietBD": "9", "ST": "2", "Phong": "C.C107", "CBGD": "11364", "Tuan": "123456789012345", "th": 0 }, { "MaMH": "841044", "TenMH": " Lập trình hướng đối tượng", "NMH": "04", "Thu": "Năm", "TietBD": "6", "ST": "2", "Phong": "C.A101", "CBGD": "11271", "Tuan": "123456789012345", "th": 0 }, { "MaMH": "841044", "TenMH": " Lập trình hướng đối tượng", "NMH": "04", "Thu": "Năm", "TietBD": "8", "ST": "3", "Phong": "C.A303", "CBGD": "11271", "Tuan": "123456789012345", "th": 0 }, { "MaMH": "841109", "TenMH": " Cơ sở dữ liệu", "NMH": "11", "Thu": "Bảy", "TietBD": "4", "ST": "2", "Phong": "C.A102", "CBGD": "20766", "Tuan": "123456789012345", "th": 0 }, { "MaMH": "841109", "TenMH": " Cơ sở dữ liệu", "NMH": "11", "Thu": "Bảy", "TietBD": "1", "ST": "3", "Phong": "C.A503", "CBGD": "20766", "Tuan": "123456789012345", "th": 0 }, { "MaMH": "841310", "TenMH": " Lý thuyết đồ thị", "NMH": "01", "Thu": "Hai", "TietBD": "6", "ST": "3", "Phong": "C.E603", "CBGD": "10943", "Tuan": "123456789012345", "th": 0 }, { "MaMH": "841419", "TenMH": " Lập trình web và ứng dụng", "NMH": "07", "Thu": "Ba", "TietBD": "1", "ST": "2", "Phong": "C.HB403", "CBGD": "10991", "Tuan": "123456789012345", "th": 0 }, { "MaMH": "841419", "TenMH": " Lập trình web và ứng dụng", "NMH": "07", "Thu": "Ba", "TietBD": "3", "ST": "3", "Phong": "C.E305", "CBGD": "10991", "Tuan": "123456789012345", "th": 0 }, { "MaMH": "862101", "TenMH": " Giáo dục thể chất (I)", "NMH": "33", "Thu": "Hai", "TietBD": "1", "ST": "2", "Phong": "C.S_B02", "CBGD": "10035", "Tuan": "123456789012345", "th": 0 } ]
 
 // ren(tkb)
-function render_schedule(tkb, div){
+function render_schedule(tkb, div, week = 1){
     div.innerHTML = ""
     const table = document.createElement('table')
     table.setAttribute('class', 'custom_table')
@@ -105,6 +105,8 @@ function render_schedule(tkb, div){
     
     const drawSchedule = (data) => {
         data.map((item, index) => {
+            // console.log(item["Tuan"][week - 1], week);
+            if (item["Tuan"][week - 1] != week) return
             const start = item["TietBD"];
             const day = item["Thu"];
             const total = item["ST"];
