@@ -1,4 +1,5 @@
 # Xem thời khoá biểu theo tuần SGU
+# Link web: https://daklod2k3.github.io/extension_chrome_tkbSGU/
 # Tính năng:
 Đã có:
 - Xuất thời khoá biểu từ source code thời khoá biểu gốc
