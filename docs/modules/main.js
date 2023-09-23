@@ -1,11 +1,8 @@
 // const $ = document
 let tkb = JSON.parse(localStorage.getItem('tkb'))
+render_schedule([], document.getElementById("table_schedule"))
 if (tkb) 
     render_schedule(tkb, document.getElementById("table_schedule"))
-else {
-    tkb = []
-    render_schedule([], document.getElementById("table_schedule"))
-}
 // if (!tbk)
 
 function import_tkb(){

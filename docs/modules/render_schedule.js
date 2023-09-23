@@ -105,8 +105,11 @@ function render_schedule(tkb, div, week = 1){
     
     const drawSchedule = (data) => {
         data.map((item, index) => {
-            // console.log(item["Tuan"][week - 1], week);
-            if (item["Tuan"][week - 1] != week) return
+            if (week >= 10){
+                if (item["Tuan"][week - 1] != week % 10) return
+            }
+            else
+                if (item["Tuan"][week - 1] != week) return
             const start = item["TietBD"];
             const day = item["Thu"];
             const total = item["ST"];
