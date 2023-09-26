@@ -67,6 +67,8 @@
   border: 1px solid transparent;
   overflow: hidden;
   height: 1px;
+  min-width: 1000px;
+
 }
 
 .custom_table td {
