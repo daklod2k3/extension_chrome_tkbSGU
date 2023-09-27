@@ -50,7 +50,9 @@
 .custom_table tr,
 .custom_table td {
   /* border: ;  */
-  /* border: 3px solid white; */
+  /* border: 1px solid white; */
+  /* border-color: var(--empty-color); */
+  /* border */
   /* border-block: 1px solid #cfcfcf; */
   /* display: flex; */
   /* width: max-content; */
@@ -82,7 +84,7 @@
 }
 
 .custom_table td div {
-  min-height: 25px;
+  /* min-height: 25px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +104,8 @@
   height: 32px !important;
   text-align: center;
   padding: 6px 0;
-  background-color: var(--empty-color);
+  background-color: rgb(45, 142, 206, 0.8);
+  border: 2px solid var(--empty-color);
   color: var(--title-color);
   font-weight: bold;
   text-transform: uppercase;
@@ -118,12 +121,15 @@
 
 .stt {
   max-width: 80px !important;
-  min-width: 80px !important;
+  min-width: 100px !important;
   text-align: center;
   padding: 6px 0;
-  background-color: var(--empty-color);
+  border: 2px solid var(--empty-color);
+  background-color: rgb(45, 142, 206, 0.8);
+  /* background-color: var(--empty-color); */
   color: var(--title-color);
   font-weight: bold;
+  /* border-block: 1px solid white; */
 }
 
 .header-fill td {

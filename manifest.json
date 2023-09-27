@@ -2,7 +2,7 @@
     "manifest_version":2,
     "version":"0.1",
     "name":"TKB Theo Tuần",
-    "decription": "Xem tkb theo tuần SGU by TDL",
+    "decription": "Xem tkb theo tuần SGU by Dak Lod",
     "content_scripts":[
       {
        "matches":["*://*/*page=thoikhoabieu*"],

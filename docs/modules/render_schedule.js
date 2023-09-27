@@ -2,6 +2,36 @@
 
 // ren(tkb)
 function render_schedule(tkb, div, week = 1){
+
+    const time = (n) =>{
+        switch (n) {
+            case 1:
+                return "7h00 - 7h45";
+            case 2:
+                return "7h50 - 8h40";
+            case 3:
+                return "9h00 - 9h50";
+            case 4:
+                return "9h50 - 10h40";
+            case 5:
+                return "10h40 - 11h30"
+            case 6:
+                return "13h00 - 13h50";
+            case 7:
+                return "13h50 - 14h40";
+            case 8:
+                return "15h00 - 15h50";
+            case 9:
+                return "15h50 - 16h40";
+            case 10:
+                return "16h40 - 17h30";
+            case 11:
+                return ""
+            case 12:
+                return ""
+        }   
+    }
+
     div.innerHTML = ""
     const table = document.createElement('table')
     table.setAttribute('class', 'custom_table')
@@ -75,7 +105,7 @@ function render_schedule(tkb, div, week = 1){
             const col = document.createElement("td");
             if (j == 1 || j == 8) {
                 col.className = "stt";
-                col.innerHTML = "<div>" + "Tiết " + i + "</div>";
+                col.innerHTML = "<div>" + "Tiết " + i + "</div>" + `<div style="{min-height: 0px !important}">${time(i)} </div>`;
             } else {
                 col.id = `d${j}_s${i}`;
                 col.className = className;

@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style_tkb.css">
     <title>TKB SGU</title>
 </head>
 <body>
     <div class="center-content">
+        <!-- <div style="width: fit-content;">
+            Thằng nào có tiền donate cho tao: <br>
+            Viettinbank: <br>
+        </div> -->
         <form onsubmit="return false" class="form-input">
             <textarea name="" cols="30" rows="10" id="source" placeholder="Nhập source code ở đây"></textarea>
             <p class="error" hidden>
@@ -17,7 +21,7 @@
             <p class="describe"> B1: Vào trang thời khoá biểu của trường và chuột phải chọn View Source Page (Xem nguồn trang)
                 <br/> B2: Ctrl A chọn tất cả và Copy
                 <br/> B3: Paste vào ô phía trên rồi ấn Nhập (quá trình paste có thể lâu hơn bình thường vì dữ liệu lớn vui lòng đợi cho đến khi source code hiện lên)</p>
-                <button onclick="import_tkb()">Nhập</button>
+            <button onclick="import_tkb()">Nhập</button>
         </form>
     </div>
     <div class="week-select">

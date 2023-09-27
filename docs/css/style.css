@@ -1,10 +1,15 @@
 :root {
     --green-color: #369925;
 }
-* {
+
+.center-content > *{
+    margin-inline: auto;
+}
+
+/* * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     font-size: .8rem !important;
-  }
+  } */
 .form-input {
     display: flex;
     flex-direction: column;
