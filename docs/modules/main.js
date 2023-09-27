@@ -1,8 +1,9 @@
 // const $ = document
 let tkb = JSON.parse(localStorage.getItem('tkb'))
-let week_start = new Date(JSON.parse(localStorage.getItem('week-start')))
+let week_start = JSON.parse(localStorage.getItem('week-start'))
 
 if (week_start){
+    week_start = new Date(week_start)
     document.getElementById('week-selection').value = Math.round((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1
 }
 
@@ -33,15 +34,19 @@ function import_tkb(){
         $(`form > .error`).text(`Đọc dữ liệu tkb lỗi!`)
         return false
     }
-    render_schedule(tkb, document.getElementById("table_schedule"))
     
     const week_start_text = html_from_source.find('#ctl00_ContentPlaceHolder1_ctl00_lblNote')[0].textContent
     const week_start_split = week_start_text.substring(week_start_text.search('bắt đầu từ ngày ') + 16, week_start_text.length - 1).split("/")
     console.log(week_start_split);
     const week_start = new Date(week_start_split[2], week_start_split[1] - 1, week_start_split[0])
-    console.log(week_start, new Date());
-    console.log(Math.round((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1);
+    // console.log(week_start, new Date());
+    // console.log(Math.round((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1);
+    const current_week = Math.round((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1
+    document.getElementById('week-selection').value = current_week
     
+    render_schedule(tkb, document.getElementById("table_schedule") , current_week)
+
+
     // $('html,body').scrollTop(0);
     $(`form > .error`).hide()
     localStorage.setItem('tkb', JSON.stringify(tkb))
@@ -50,6 +55,13 @@ function import_tkb(){
     return false
 }
 
-function onChangeSelection(){
+const onChangeSelection = ()=>{
+    console.log('test');
     render_schedule(tkb, document.getElementById("table_schedule"),document.getElementById('week-selection').value)
 }
+
+
+
+document.querySelector('form > button').addEventListener("click", import_tkb)
+document.querySelector('form').onsubmit = ()=> {return false}
+document.querySelector('.week-select > select').onChangeSelection = onChangeSelection
