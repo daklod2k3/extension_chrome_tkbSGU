@@ -157,7 +157,7 @@
 .fixed-col {
   position: -webkit-sticky;
   position: sticky;
-  border: none !important;
+  /* border: none !important; */
   /* position: fixed; */
   left: -1px;
   z-index: 10000;

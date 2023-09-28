@@ -63,16 +63,16 @@ body {
     box-shadow: 0 3px 0 0 #367f14, 0 4px 4px -1px rgba(0, 0, 0, 0.6), 0 4px 6px 1px rgba(0, 0, 0, 0.3), 0 1px 2px 1px rgba(0, 0, 0, 0) inset, 0 18px 32px -2px rgba(255, 255, 255, 0.1) inset;
     transition: box-shadow 0.2s, transform 0.2s, color 0.2s;
     margin-top: 20px;
-    width: 130px;
-    height: 40px;
+    min-width: 70px;
+    min-height: 30px;
     margin-inline: auto;
     border-width: 0px;
     color: white;
     border-radius: 5px;
     background-color: #4dc217;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-size: 12px;
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
 }
 
 .form-input button:active{
@@ -84,10 +84,15 @@ body {
 }
 
 .week-select {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     margin-bottom: -45px;
     width: max-content;
     margin-inline: auto;
+}
+
+.form-input .form-actions {
+    display: flex;
+    gap: 20px;
 }
 
 @media screen and (max-width: 1000px) {

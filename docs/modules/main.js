@@ -60,13 +60,6 @@ const onChangeSelection = ()=>{
     render_schedule(tkb, document.getElementById("table_schedule"),document.getElementById('week-selection').value)
 }
 
-
-
-document.querySelector('form > button').addEventListener("click", import_tkb)
-document.querySelector('form').onsubmit = ()=> {return false}
-document.querySelector('.week-select > select').onChangeSelection = onChangeSelection
-
-
 const scrollToCurrentDay = (() => {
     
     const curr_day = new Date().getDay() + 1
@@ -76,3 +69,11 @@ const scrollToCurrentDay = (() => {
     console.log(scrollDiv);
     document.querySelector('.custom_table').scrollTo({ left: scrollDiv.offsetLeft - 110, behavior: 'smooth'});
 })()
+
+
+document.querySelector('form').onsubmit = ()=> {return false}
+document.querySelector('form #import-from-source').addEventListener("click", import_tkb)
+document.querySelector('.week-select > select').onChangeSelection = onChangeSelection
+
+
+
