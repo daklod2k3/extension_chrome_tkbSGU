@@ -4,7 +4,7 @@ let week_start = JSON.parse(localStorage.getItem('week-start'))
 
 if (week_start){
     week_start = new Date(week_start)
-    document.getElementById('week-selection').value = Math.round((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1
+    document.getElementById('week-selection').value = Math.floor((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1
 }
 
 if (tkb) 
@@ -41,7 +41,7 @@ function import_tkb(){
     const week_start = new Date(week_start_split[2], week_start_split[1] - 1, week_start_split[0])
     // console.log(week_start, new Date());
     // console.log(Math.round((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1);
-    const current_week = Math.round((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1
+    const current_week = Math.floor((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1
     document.getElementById('week-selection').value = current_week
     
     render_schedule(tkb, document.getElementById("table_schedule") , current_week)

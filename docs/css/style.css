@@ -2,8 +2,14 @@
     --green-color: #369925;
 }
 
+body {
+    /* overflow: hidden; */
+    /* margin: 0px; */
+    width: calc(100vw - 20px);
+}
+
 .center-content {
-    width: 100vw;
+    /* width: 100%; */
 }
 
 .center-content > *{
@@ -82,4 +88,10 @@
     margin-bottom: -45px;
     width: max-content;
     margin-inline: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        margin-top: 100px;
+    }
 }
