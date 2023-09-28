@@ -35,6 +35,12 @@
   --course-10-color: #607D8B2A;
 }
 
+/* body  {
+  overflow: clip ;
+  position: relative;
+  height: 500px;
+} */
+
 .custom_table * {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 12px !important;
@@ -57,7 +63,22 @@
   /* display: flex; */
   /* width: max-content; */
   /* height: max-content !important; */
+  /* overflow: scroll; */
 
+}
+
+/* tbody {
+  position: -webkit-sticky;
+} */
+
+.custom_table {
+  /* overflow-x: scroll; */
+}
+
+@media screen and (max-width: 1000px){
+  .custom_table {
+    overflow-x: scroll;
+  }
 }
 
 .custom_table table {
@@ -67,10 +88,9 @@
   border-spacing: 5px;
   /* border-radius: 5px; */
   border: 1px solid transparent;
-  overflow: auto;
-  overflow-x: auto;
-  height: 1px;
-  width: 1000px;
+  /* height: 1px; */
+  min-width: 1000px;
+  position: relative;
 }
 
 .custom_table td {
@@ -109,6 +129,9 @@
   color: var(--title-color);
   font-weight: bold;
   text-transform: uppercase;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
 }
 
 .col_basic {
@@ -135,9 +158,10 @@
 .fixed-col {
   position: -webkit-sticky;
   position: sticky;
+  border: none;
+  /* position: fixed; */
   left: 0px;
   z-index: 10000;
-  border: none;
 }
 
 .header-fill td {
