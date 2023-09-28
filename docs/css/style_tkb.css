@@ -38,7 +38,7 @@
   overflow-y: scroll;
   /* scrollbar-gutter: stable both-edges; */
   /* min-width: 900px; */
-  height: calc(100vh - 150px);
+  height: calc(100vh - 170px);
   max-width: 1000px;
   width: 100%;
   margin: auto;
@@ -150,7 +150,7 @@
   background-color: var(--empty-color);
   color: var(--title-color);
   font-weight: bold;
-  /* border-block: 1px solid white; */
+  border: 1px solid white !important;
   border: none;
 }
 

@@ -65,3 +65,14 @@ const onChangeSelection = ()=>{
 document.querySelector('form > button').addEventListener("click", import_tkb)
 document.querySelector('form').onsubmit = ()=> {return false}
 document.querySelector('.week-select > select').onChangeSelection = onChangeSelection
+
+
+const scrollToCurrentDay = (() => {
+    
+    const curr_day = new Date().getDay() + 1
+    console.log(curr_day);
+
+    const scrollDiv = document.querySelectorAll('.thead_td')[curr_day - 2];
+    console.log(scrollDiv);
+    document.querySelector('.custom_table').scrollTo({ left: scrollDiv.offsetLeft - 110, behavior: 'smooth'});
+})()
