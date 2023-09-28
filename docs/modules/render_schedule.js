@@ -83,7 +83,7 @@ function render_schedule(tkb, div, week = 1){
     
     const lastRow = document.createElement("tr");
         lastRow.innerHTML =
-            '<td class="stt bg-white"></td>' +
+            '<td class="stt bg-white fixed-col"></td>' +
             '<td class="thead_td">Thứ Hai</td>' +
             '<td class="thead_td">Thứ Ba</td>' +
             '<td class="thead_td">Thứ Tư</td>' +
@@ -103,10 +103,16 @@ function render_schedule(tkb, div, week = 1){
         for (let j = 1; j <= 8; j++) {
             const className = "col_basic";
             const col = document.createElement("td");
-            if (j == 1 || j == 8) {
-                col.className = "stt";
+            if (j == 1) {
+                col.className = "stt fixed-col";
                 col.innerHTML = "<div>" + "Tiết " + i + "</div>" + `<div style="{min-height: 0px !important}">${time(i)} </div>`;
-            } else {
+            }else
+            if (j == 8)
+            {
+                col.className = "stt"
+                col.innerHTML = "<div>" + "Tiết " + i + "</div>" + `<div style="{min-height: 0px !important}">${time(i)} </div>`;
+            } 
+            else {
                 col.id = `d${j}_s${i}`;
                 col.className = className;
             }
@@ -205,7 +211,7 @@ function render_schedule(tkb, div, week = 1){
             '<td class="header-fill"></td>' +
             '<td class="header-fill"></td>' +
             '<td ></td>';
-        table_body.append(lastRow);
+        // table_body.append(lastRow);
     };
     
     drawSchedule(tkb)
