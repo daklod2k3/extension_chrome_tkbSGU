@@ -133,6 +133,7 @@
 }
 
 .fixed-col {
+  position: -webkit-sticky;
   position: sticky;
   left: 0px;
   z-index: 10000;
