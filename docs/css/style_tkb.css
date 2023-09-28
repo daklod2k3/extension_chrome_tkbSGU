@@ -125,8 +125,8 @@
   text-align: center;
   padding: 6px 0;
   /* border: 2px solid var(--empty-color); */
-  /* background-color: rgb(45, 142, 206, 0.8); */
-  background-color: var(--empty-color);
+  background-color: rgb(45, 142, 206, 0.8);
+  /* background-color: var(--empty-color); */
   color: var(--title-color);
   font-weight: bold;
   /* border-block: 1px solid white; */
