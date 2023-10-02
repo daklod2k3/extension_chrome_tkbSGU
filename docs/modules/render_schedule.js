@@ -2,6 +2,7 @@
 
 // ren(tkb)
 function render_schedule(tkb, div, week = 1){
+    // console.log(week);
 
     const time = (n) =>{
         switch (n) {
@@ -83,14 +84,14 @@ function render_schedule(tkb, div, week = 1){
     
     const lastRow = document.createElement("tr");
         lastRow.innerHTML =
-            '<td class="stt bg-white fixed-col"></td>' +
+            '<td class="thead_td bg-white fixed-col"></td>' +
             '<td class="thead_td">Thứ Hai</td>' +
             '<td class="thead_td">Thứ Ba</td>' +
             '<td class="thead_td">Thứ Tư</td>' +
             '<td class="thead_td">Thứ Năm</td>' +
             '<td class="thead_td">Thứ Sáu</td>' +
             '<td class="thead_td">Thứ Bảy</td>' +
-            '<td class="stt bg-white"></td>';
+            '<td class="thead_td bg-white"></td>';
     
     // Vẽ bảng rỗng
     

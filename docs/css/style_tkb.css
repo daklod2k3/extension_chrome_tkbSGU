@@ -150,7 +150,7 @@
   background-color: var(--empty-color);
   color: var(--title-color);
   font-weight: bold;
-  border: 1px solid white !important;
+  border-block: 0.5px solid darkgray !important;
   border: none;
 }
 

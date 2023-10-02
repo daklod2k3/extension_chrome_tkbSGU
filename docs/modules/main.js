@@ -7,8 +7,11 @@ if (week_start){
     document.getElementById('week-selection').value = Math.floor((new Date().getTime() - week_start.getTime()) / (1000 * 3600 * 24 * 7)) + 1
 }
 
-if (tkb) 
-    render_schedule(tkb, document.getElementById("table_schedule", document.getElementById('week-selection').value))
+if (tkb) {
+    console.log(document.getElementById('week-selection').value);
+    render_schedule(tkb, document.getElementById("table_schedule"), document.getElementById('week-selection').value)
+
+}
 else 
     render_schedule([], document.getElementById("table_schedule"))
 
@@ -56,24 +59,23 @@ function import_tkb(){
 }
 
 const onChangeSelection = ()=>{
-    console.log('test');
     render_schedule(tkb, document.getElementById("table_schedule"),document.getElementById('week-selection').value)
 }
 
 const scrollToCurrentDay = (() => {
     
     const curr_day = new Date().getDay() + 1
-    console.log(curr_day);
+    // console.log(curr_day);
 
     const scrollDiv = document.querySelectorAll('.thead_td')[curr_day - 2];
-    console.log(scrollDiv);
+    // console.log(scrollDiv);
     document.querySelector('.custom_table').scrollTo({ left: scrollDiv.offsetLeft - 110, behavior: 'smooth'});
 })()
 
 
 document.querySelector('form').onsubmit = ()=> {return false}
 document.querySelector('form #import-from-source').addEventListener("click", import_tkb)
-document.querySelector('.week-select > select').onChangeSelection = onChangeSelection
+document.querySelector('.week-select > select').addEventListener("change", onChangeSelection)
 
 
 

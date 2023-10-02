@@ -101,3 +101,9 @@ body {
     /* margin-top: 90px; */
     }
 }
+
+img {
+    width: calc(100% - 10px);
+    height: auto;
+    margin: auto;
+}
