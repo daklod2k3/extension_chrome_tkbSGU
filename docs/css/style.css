@@ -107,3 +107,7 @@ img {
     height: auto;
     margin: auto;
 }
+
+a, a:visited {
+    color: #2D8ECE;
+}
